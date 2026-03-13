@@ -1,0 +1,126 @@
+/* src/index.css */
+
+/* Tailwind Directives - Keep these at the top */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Temporary Basic Styling Overrides --- */
+/* Apply to the whole page */
+body {
+  background-color: #ffffff !important;
+  /* White background */
+  color: #000000 !important;
+  /* Black text */
+  @apply font-sans;
+  /* Keep using a reasonable default font */
+}
+
+/* Ensure links are visible and standard blue */
+a {
+  color: #0000EE !important;
+  /* Standard link blue */
+  text-decoration: underline !important;
+}
+
+a:hover {
+  color: #551A8B !important;
+  /* Standard visited link purple */
+}
+
+/* Override link colors within specific components if needed */
+.nav-link {
+  /* Example class you might add to Link components in Navbar */
+  color: #0000EE !important;
+}
+
+.nav-link:hover {
+  color: #551A8B !important;
+}
+
+
+/* Basic button styling override */
+/* This makes ALL buttons look the same - remove or refine later */
+button,
+a.button-link
+
+/* Add class="button-link" to Link components acting as buttons */
+  {
+  background-color: #f0f0f0 !important;
+  /* Light gray background */
+  color: #000000 !important;
+  /* Black text */
+  border: 1px solid #ababab !important;
+  /* Gray border */
+  padding: 0.5rem 1rem !important;
+  /* Standard padding */
+  border-radius: 0.25rem !important;
+  /* Slight rounding */
+  text-decoration: none !important;
+  /* Remove underline from links styled as buttons */
+  cursor: pointer;
+  display: inline-block;
+  /* Ensure links styled as buttons behave like buttons */
+}
+
+button:hover,
+a.button-link:hover {
+  background-color: #e0e0e0 !important;
+  /* Slightly darker gray on hover */
+  border-color: #888888 !important;
+}
+
+button:disabled,
+a.button-link:disabled {
+  /* You might need to handle disabled state for Links differently */
+  opacity: 0.5 !important;
+  cursor: not-allowed;
+}
+
+/* Style headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000 !important;
+  /* Black text */
+  /* Reset any specific Tailwind text color classes */
+  --tw-text-opacity: 1 !important;
+}
+
+/* Style inputs/textareas */
+input,
+textarea,
+select {
+  color: #000000 !important;
+  /* Black text */
+  background-color: #ffffff !important;
+  /* White background */
+  border: 1px solid #888888 !important;
+  /* Ensure borders are visible */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #666666 !important;
+  /* Make placeholders visible gray */
+}
+
+/* Force white background on elements previously styled with bg-white */
+/* Useful if other Tailwind classes are overriding the body background */
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+/* Force black text on elements previously styled with text-gray-XXX */
+.text-gray-500,
+.text-gray-600,
+.text-gray-700,
+.text-gray-800
+
+/* etc. */
+  {
+  color: #000000 !important;
+}
